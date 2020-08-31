@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro - Home</title>
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-1">Home</a>
+            <a href="page1.html" class="nav-2">HTML5</a>
+            <a href="page2.html" class="nav-3">CSS</a>
+            <a href="https://github.com/Neocyte" target="_blank" class="nav-4">About Me</a>
+        </div>
+    </nav>
+
+    <section class="section section-text">
+        <div class="intro-container">
+            <div class="intro-heading">
+                <h2>Intro to Web Development</h2>
+            </div>
+
+            <div class="intro-image">
+                <img class="main-image" src="https://www.mazekul.com/wp-content/uploads/2019/09/web-dev-usa.gif" alt="main image">
+            </div>
+
+            <div class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p class="modal-text">
+                        Enter an integer from 0-999.
+                        If you guess the magic number, you get $250!
+                        Every entry costs 1$.
+                    </p>
+
+                    <p class="money1">Money: $<span class="money2">250</span></p>
+
+                    <form name="form" action="javascript: changeMoney()" method="GET">
+                        <input type="text" id="textfield" name="textfield"><br><br>
+                        <input type="submit" id="submit-button" value="Submit">
+                    </form>
+                </div>
+            </div>
+
+            <div class="intro-description">
+                <p>
+                    The purpose of this website is to teach the basics of HTML5 and CSS.
+                    Use the navigation tabs to look at either HTML5 or CSS basics.
+                    Or, you can click the link below to play a number game!
+                </p>
+            </div>
+
+            <button class="game-button">PLAY</button>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>

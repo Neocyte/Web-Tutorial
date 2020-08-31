@@ -1,0 +1,497 @@
+/*GENERAL*/
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: Lato, serif;
+    margin: 0;
+    color: #fff;
+    overflow: hidden;
+}
+
+/*Navigation Bar*/
+
+.nav {
+    width: 100%;
+    height: 7.5%;
+    z-index: 1;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-container a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+}
+
+
+.nav-container a:after, a:visited:after {
+    content: '';
+    height: 5px;
+    position: absolute;
+    bottom: 25px;
+    left: inherit;
+    width: 0;
+    background: #20B2AA;
+    transition: 0.2s;
+}
+
+.nav-container a:first-child:hover:after, a:visited:hover:after {
+    width: 30%;
+}
+
+.nav-container a:nth-child(2n):hover:after, a:visited:hover:after {
+    width: 37.5%;
+}
+
+.nav-container a:nth-child(3n):hover:after, a:visited:hover:after {
+    width: 20%;
+}
+
+.nav-container a:last-child:hover:after, a:visited:hover:after {
+    width: 45.5%;
+}
+
+.nav-container a.block, a:visited.block {
+    display: block;
+    padding: 0.5em;
+}
+
+.nav-container a.block:hover, a:visited.block:hover {
+    background: #eee;
+}
+
+.nav-1,
+.nav-2,
+.nav-3,
+.nav-4 {
+    width: 7.5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/*HOME*/
+
+.section {
+    background: repeating-linear-gradient(
+            45deg,
+            #431AAA,
+            #4444CC 33.33%,
+            #3498EE 33.33%
+    );
+    height: 100%;
+}
+
+.section-text {
+    padding: 0 5%;
+}
+
+.intro-container {
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-heading {
+    width: 100%;
+    text-align: center;
+}
+
+.intro-image {
+    width: 100%;
+    text-align: center;
+    animation: fadeInAnimation ease 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.main-image {
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+}
+
+.intro-description {
+    width: 35%;
+    text-align: left;
+    padding-bottom: 1%;
+    animation: fadeInAnimation ease 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.game-button {
+    width: 20%;
+    font-size: 30px;
+    font-weight: bold;
+    border: solid #4CC5F8;
+    background: linear-gradient(to right, #4AC9DC, #4CC5F8,#3498EE);
+    color: #fff;
+    border-radius: 20px;
+    outline: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    animation: fadeInAnimation ease 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.game-button:hover {
+    color: #4444CC;
+}
+
+/*MODAL*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    bottom: 8.5%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 29.5%;
+    height: 42%;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    transition: all 1s linear;
+    display: block;
+}
+
+.modal-text {
+    margin-top: 15%;
+    font-size: 30px;
+    text-align: center;
+    color: #000;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.money1 {
+    text-align: center;
+    color: #000;
+}
+
+#textfield {
+    width: 30%;
+    height: 10%;
+    font-size: 30px;
+    text-align: center;
+}
+
+#submit-button {
+    width: 30%;
+    height: 10%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    background: #4444CC;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#submit-button:hover {
+    color: #4AC9DC;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.visuallyhidden {
+    opacity: 0;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    from {top: -20%; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+/*SMALL DEVICES*/
+
+@media screen and (max-width: 600px) {
+    .nav-1,
+    .nav-2,
+    .nav-3,
+    .nav-4 {
+        width: 33.33%;
+        font-size: 15px;
+    }
+
+    .intro-heading {
+        font-size: 15px;
+    }
+
+    .main-image {
+        width: 100%;
+    }
+
+    .intro-description {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .modal {
+        height: 100%;
+        bottom: 0;
+    }
+
+    .modal-content {
+        width: 90%;
+        height: 90%;
+        padding: 0;
+    }
+
+    .close {
+        padding-right: 2%;
+    }
+
+    #submit-button {
+        width: 50%;
+    }
+
+    .game-button {
+        width: 50%;
+        font-size: 20px;
+        padding: 5px 40px;
+        margin: 0;
+    }
+}
+
+/*MEDIUM DEVICES*/
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+    .nav-1,
+    .nav-2,
+    .nav-3,
+    .nav-4 {
+        width: 30%;
+        font-size: 20px;
+    }
+
+    .intro-image {
+        height: 45%;
+    }
+
+    .main-image {
+        height: 100%;
+    }
+
+    .intro-description {
+        width: 80%;
+        text-align: left;
+        font-size: 30px;
+    }
+
+    .modal {
+        height: 100%;
+        top: 6.5%;
+    }
+
+    .modal-content {
+        width: 80%;
+        height: 45%;
+        padding: 0;
+    }
+
+    .close {
+        font-size: 50px;
+        padding-right: 2%;
+    }
+
+    #submit-button {
+        width: 40%;
+    }
+
+    .game-button {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1050px) {
+    .nav-1,
+    .nav-2,
+    .nav-3,
+    .nav-4 {
+        width: 30%;
+        font-size: 20px;
+    }
+
+    .intro-image {
+        padding-bottom: 2%;
+    }
+
+    .intro-description {
+        width: 80%;
+        text-align: left;
+    }
+
+    .modal {
+        height: 100%;
+        top: 9.5%;
+    }
+
+    .modal-content {
+        width: 68%;
+        height: 44%;
+        padding: 0 5%;
+    }
+
+    .close {
+        font-size: 60px;
+        padding-right: 2%;
+    }
+
+    #submit-button {
+        width: 40%;
+    }
+
+    .game-button {
+        width: 50%;
+    }
+}
+
+/*LARGE DEVICES*/
+
+@media screen and (min-width: 1100px) and (max-width: 1500px) {
+    .intro-heading {
+        font-size: 25px;
+    }
+
+    .nav-4 {
+        padding-right: 1%;
+    }
+
+    .main-image {
+        height: 400px;
+    }
+
+    .intro-description {
+        width: 40%;
+        font-size: 25px;
+        text-align: left;
+    }
+
+    .modal {
+        height: 100%;
+        bottom: 6%;
+    }
+
+    .modal-content {
+        width: 33%;
+        height: 45%;
+        padding: 0 2%;
+    }
+
+    .modal-text {
+        margin-top: 8%;
+    }
+
+    .close {
+        font-size: 40px;
+    }
+
+    #submit-button {
+        width: 40%;
+    }
+
+    .game-button {
+        width: 20%;
+        font-size: 25px;
+        margin: 0;
+        padding: 10px 32px;
+    }
+
+    .nav-container a:after, a:visited:after {
+        bottom: 15px;
+    }
+
+    .nav-container a:first-child:hover:after, a:visited:hover:after {
+        width: 50%;
+    }
+
+    .nav-container a:nth-child(2n):hover:after, a:visited:hover:after {
+        width: 65%;
+    }
+
+    .nav-container a:nth-child(3n):hover:after, a:visited:hover:after {
+        width: 35%;
+    }
+
+    .nav-container a:last-child:hover:after, a:visited:hover:after {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1501px) {
+    /*TODO*/
+}
