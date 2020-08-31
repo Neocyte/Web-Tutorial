@@ -492,6 +492,32 @@ form {
     }
 }
 
-@media screen and (min-width: 1501px) {
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+    .nav-container a:after, a:visited:after {
+        bottom: 20px;
+    }
+
+    .nav-container a:first-child:hover:after, a:visited:hover:after {
+        width: 45%;
+    }
+
+    .nav-container a:nth-child(2n):hover:after, a:visited:hover:after {
+        width: 55%;
+    }
+
+    .nav-container a:nth-child(3n):hover:after, a:visited:hover:after {
+        width: 30%;
+    }
+
+    .nav-container a:last-child:hover:after, a:visited:hover:after {
+        width: 70%;
+    }
+
+    .main-image {
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 1921px) {
     /*TODO*/
 }
