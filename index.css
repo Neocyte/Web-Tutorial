@@ -287,6 +287,10 @@ form {
         font-size: 15px;
     }
 
+    .nav-container a:after, a:visited:after {
+        visibility: hidden;
+    }
+
     .intro-heading {
         font-size: 15px;
     }
@@ -338,6 +342,10 @@ form {
         font-size: 20px;
     }
 
+    .nav-container a:after, a:visited:after {
+        visibility: hidden;
+    }
+
     .intro-image {
         height: 45%;
     }
@@ -384,6 +392,10 @@ form {
     .nav-4 {
         width: 30%;
         font-size: 20px;
+    }
+
+    .nav-container a:after, a:visited:after {
+        visibility: hidden;
     }
 
     .intro-image {
