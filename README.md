@@ -1,7 +1,5 @@
 # Mason Wu - Web Tutorial
 
-# Mason Wu - Frontend Web Development Portfolio
-
 ## Table of Contents
 
 * [Background](#background)
@@ -13,4 +11,4 @@ This project is a website that teaches the basics of HTML5 and CSS. My goal was 
 
 ## Instructions
 
-You can access the portfolio by clicking [here](https://neocyte.github.io/Web-Tutorial/).
+You can access the web tutorial by clicking [here](https://neocyte.github.io/Web-Tutorial/).
